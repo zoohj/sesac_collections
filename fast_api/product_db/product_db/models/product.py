@@ -5,7 +5,9 @@ from typing import TYPE_CHECKING
 
 if TYPE_CHECKING:
     from .category import Category
+
     from .wishlist import Wishlist
+    from .wishlist2 import Wishlist2
 
 
 class Product(Base):
@@ -21,5 +23,8 @@ class Product(Base):
     # category클래스 안의 products 변수
 
     wishlists: Mapped[list["Wishlist"]] = relationship(
-        "WishList", back_populates="product"
+        "Wishlist", back_populates="product"
+    )
+    wishlists2: Mapped[list["Wishlist2"]] = relationship(
+        "Wishlist2", back_populates="product"
     )

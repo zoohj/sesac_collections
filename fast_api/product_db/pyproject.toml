@@ -1,0 +1,21 @@
+[project]
+name = "product-db"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "bcrypt>=5.0.0",
+    "email-validator>=2.3.0",
+    "fastapi[standard]",
+    "psycopg2-binary>=2.9.11",
+    "pyjwt>=2.11.0",
+    "pyt>=1.4.0",
+    "requests>=2.32.5",
+    "sqlalchemy>=2.0.46",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
